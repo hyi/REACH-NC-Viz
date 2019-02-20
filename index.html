@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<meta charset="utf-8">
+  <head>
+	<title>UNC BBSP faculty collaboration network visualization</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!--<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>-->
+	<link type="text/css" rel="stylesheet" href="networkvis.css"/>
+  </head>
+  <body>
+	<div id='topwindow'> 
+		<div id='helplink'>
+		<a href="http://bbsp.unc.edu" target="_blank"> Return to UNC BBSP web site</a>
+		<br />
+		<a href="http://reachnc.org" target="_blank"> Return to REACH NC main web portal</a>
+		</div>
+		<div id='image'><img src='reachnc-bbsp.jpg' border="0"/> </a> </div>
+	</div>
+	<div id="container" class="container">
+		<header>
+			<p>This network shows the collaboration of faculty in the <a href="http://bbsp.unc.edu/">Biological and Biomedical Sciences Program (BBSP)</a> at UNC-Chapel Hill based on publications or grants. </p>
+    	</header>
+		<div id="filter" class="control">
+		<input type="radio" name="networkSource" onclick="handleNetworkSourceChange(this)" value="Pub" checked>Publication
+		<input type="radio" name="networkSource" onclick="handleNetworkSourceChange(this)" value="Grant">Grant
+		<button id="button" onclick="ResetView()">Reset View</button>
+		<input type="button" id="togglelayout" onclick="ToggleLayout(this)" value="Pause Layout"></input>
+		<label for="search">Search: </label>
+		<input type="text" id="search" onkeyup="updateSearch(this.value)" title="type in keywords to search by faculty name or affiliation, use comma to separate multiple search keywords."></input>
+		</div>
+		<div id="affil_filter" class="control">
+		<span id="SILS"><input type="checkbox" class="unit" onclick="handleClick_SILS(this)" value="School of Information and Library Science" checked><b>SILS</b></span>
+		<span id="AS"><input type="checkbox" class="unit" onclick="handleClick_AS(this)" value="College of Arts & Sciences" checked><b>Arts & Sciences</b></span>
+		<span id="Med"><input type="checkbox" class="unit" onclick="handleClick_Med(this)" value="School of Medicine" checked><b>Medicine</b></span>
+		<span id="Dent"><input type="checkbox" class="unit" onclick="handleClick_Dent(this)" value="School of Dentistry" checked><b>Dentistry</b></span>
+		<span id="SPH"><input type="checkbox" class="unit" onclick="handleClick_SPH(this)" value="Gillings School of Global Public Health" checked><b>Public Health</b></span>
+		<span id="Pharm"><input type="checkbox" class="unit" onclick="handleClick_Pharmacy(this)" value="Eshelman School of Pharmacy" checked><b>Pharmacy</b></span>
+		<span id="Admin"><input type="checkbox" class="unit" onclick="handleClick_Admin(this)" value="Administration" checked><b>Graduate School Admin</b></span>
+		</div>
+		<div id="chart"></div>
+    	<div id="datainfo"></div>
+    	<script type="text/javascript" src="networkvis.js"></script>
+	</div>
+	<div id='copyright'>Please contact <a href="mailto:hongyi@renci.org">RENCI</a> with any questions, feature requests, suggestions, and feedback. &nbsp; &nbsp; &copy; 2014 <a href="http://www.renci.org/" target="_blank">RENCI</a>.</div> 
+  </body>
+</html>

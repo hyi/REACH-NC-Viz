@@ -1,0 +1,126 @@
+#topwindow {
+    height: 81px;
+}
+
+#image {
+  height: 81px;
+  width: 866px;
+  position: absolute;
+}
+ 
+#helplink { 
+    position: relative;
+	top: 20px;
+    float: right;
+	padding-right: 1em;
+}
+
+#copyright {
+	font-size: 0.9em;
+	padding-top: 0em;
+	position: relative;
+	float:right;
+	margin-right: 1.5em;
+}
+
+#button { 
+    position: relative;
+	margin-left: 5em;
+}
+
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
+
+circle {
+	cursor: move;
+	stroke: #fff;
+	stroke-width: 1.5px;
+	stroke-opacity: .9;
+}
+
+text {
+	fill: #000;
+	font: 10px sans-serif;
+	pointer-events: none;
+}
+
+path {
+    cursor: move;
+	fill: none;
+	stroke: #999;
+	stroke-opacity: .6;
+}
+
+div[id='chart'] {
+	border: 1px solid #ccc;
+	position: relative;
+	width:100%; height:100%;
+	margin-bottom: 1em;
+    margin-right: 1em;
+}
+body {
+	font: 10px sans-serif;
+}
+
+div.tooltip {
+	position: absolute;
+	text-align: center;
+	padding: 2px;
+	font: 10px sans-serif;
+	background: rgba(250, 250, 0, 0.5);
+	border: solid 1px #aaa;
+	border-radius: 8px;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+div[id='datainfo'] {
+    width: 97%;
+	position: relative;
+    background-color:#ffffff;
+    padding-top: 1em;
+    padding-right: 2em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border-style: solid;
+    border-color: #729c50;
+    border-width:1px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+}    
+
+th.header
+{ border-bottom: 1px solid #6699CC;
+border-left: 1px solid #6699CC;
+background-color: white;
+text-align: center;
+font-family: Verdana;
+font-weight: bold;
+font-size: 11px;
+color: #404040; }
+
+table.info
+{ text-align: center;
+font-family: Verdana;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+background-color: #fafafa;
+border: 1px #6699CC solid;
+border-collapse: collapse;
+border-spacing: 0px; } 
+
+table.info td
+{ border-bottom: 1px dotted #6699CC;
+border-left: 1px dotted #6699CC;	
+font-family: Verdana, sans-serif, Arial;
+font-weight: normal;
+font-size: 11px;
+color: #404040;
+background-color: white;
+text-align: center;
+padding-left: 2px;
+padding-right: 2px;}
